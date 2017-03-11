@@ -64,6 +64,9 @@ RUN mv /var/lib/mysql /var/lib/mysql-dist && \
 # give nmap setgid as requested by OAE
 RUN chmod g+s $(which nmap)
 
+# enable php5 modules
+RUN php5enmod mcrypt
+
 # setup run.sh, which is our container init
 WORKDIR /usr/local/omk
 COPY run.sh run.sh
