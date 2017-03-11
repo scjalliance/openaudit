@@ -41,7 +41,7 @@ if [ ! -f /.first-run-done ]; then
 	# set URL
 	if [ ! -z "$BASEURL" ]; then
 		for VBS in /usr/local/open-audit/other/*.{sh,vbs}; do
-			sed -i 's@"http://localhost/"@"${BASEURL}/@g' "$VBS"
+			sed -i 's@"http://localhost/@"${BASEURL}/@g' "$VBS"
 		done
 	fi
 fi
