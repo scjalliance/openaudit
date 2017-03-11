@@ -54,7 +54,7 @@ CMD chown -Rf mysql: /data/mysql
 # install OAE
 RUN service mysql start && \
     cd /tmp/Open-AudIT* && \
-    timeout -s9 2m ./installer && \
+    timeout -s9 5m ./installer && \
     service mysql stop
 
 # move distribution data out of the way (run.sh will move them back if necessary)
